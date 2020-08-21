@@ -2,7 +2,7 @@ from sklearn import model_selection
 import pandas as pd
 import numpy as np
 
-csv_path = "input/train_labels.csv"
+csv_path = "../input/train_labels.csv"
 df = pd.read_csv(csv_path)
 y = df["target"]
 df["kfold"] = -1
