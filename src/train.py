@@ -18,7 +18,7 @@ if __name__ == "__main__":
     images = df.image.values.tolist()
     # a list with image locations
     images = [
-        os.path.join(data_path, i + ".png") for i in images
+        os.path.join(data_path, i + ".jpg") for i in images
     ]
     targets = df.target.values
     model = get_model(pretrained=True)

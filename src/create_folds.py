@@ -11,4 +11,4 @@ for fold_, (trn_, val_) in enumerate(kf.split(X=df, y=y)):
     df.loc[val_, "kfold"] = fold_
 print(df.head())
 
-df.to_csv("input/train_folds.csv")
+df.to_csv("../input/train_folds.csv")

@@ -2,6 +2,7 @@ import torch
 import numpy as np
 from PIL import Image
 from PIL import ImageFile
+import os
 
 # When having images without ending bits This takes care of those
 
@@ -16,8 +17,8 @@ class ClassificationDataset:
         return len(self.image_paths)
     
     def __getitem__(self, item):
-        image = Image.open(self.image_paths[item])
-        image = Image.convert("RGB")
+        image = Image.open(os.path.join("../input/images", self.image_paths[item]))
+        image = image.convert("RGB")
         targets = self.targets[item]
         # resize
         if self.resize is not None:
